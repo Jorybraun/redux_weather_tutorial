@@ -1,25 +1,10 @@
-# ReduxSimpleStarter
+## Tutorial From Udemy About React And Redux
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
-
-###Getting Started###
-
-There are two methods for getting started with this repo.
-
-####Familiar with Git?#####
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReduxSimpleStarter
-	> npm install
-	> npm start
-```
-
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+This was a project in the Modern React with redux course from Udemy, so far this course has been very rewarding.
 
 ```
 	> npm install
 	> npm start
 ```
+
+### The Purpose of this app is to take user input and return the relevant weather data from the API.
