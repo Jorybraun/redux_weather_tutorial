@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchWeather } from '../actions/index';
 
-export default class SearchBar extends Component{
+
+class SearchBar extends Component{
   constructor(props){
     super(props);
 
@@ -15,6 +19,11 @@ export default class SearchBar extends Component{
 
   handleSubmit(e){
     e.preventDefault();
+   
+    // pass the action creator here 
+    this.props.fetchWeather(this.state.term);
+    // clear the state which causes component to rerender and replace the value to the user
+    this.setState({ term: '' });
   }
 
   render(){
@@ -33,3 +42,16 @@ export default class SearchBar extends Component{
     )
   }
 }
+
+// Hook up action creator 
+function mapDispatchToProps(dispatch) {
+  // when ever it gets called it passes the action to the reducers
+  return bindActionCreators( { fetchWeather }, dispatch );
+}
+
+
+// passing in null for first argument because first is argument is for state
+// this container doesnt have state
+export default connect(null, mapDispatchToProps)(SearchBar);
+
+
